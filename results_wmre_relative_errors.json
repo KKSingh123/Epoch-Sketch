@@ -1,0 +1,2439 @@
+{
+  "formula": {
+    "relative_error": "|estimate - true| / true",
+    "are": "mean(relative_error over selected flows)",
+    "wmre": "sum(|estimate - true|) / sum(true)"
+  },
+  "methods": [
+    "CountLess",
+    "Elastic",
+    "Stable",
+    "Aegis"
+  ],
+  "results": [
+    {
+      "dataset": "CAIDA",
+      "trace": "dataset/CAIDA/5.dat",
+      "packets": 2530680,
+      "unique_flows": 175806,
+      "hh_pct": 0.1,
+      "hh_threshold": 2530.68,
+      "hh_flow_count": 61,
+      "memories": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "results": {
+        "CountLess": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16384,
+            "update_seconds": 16.684340296007576,
+            "all_flows": {
+              "are": 396.02575674216,
+              "wmre": 56.36260570281505,
+              "max_relative_error": 3198.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 142635719.0
+            },
+            "heavy_hitters": {
+              "are": 0.015558770463679492,
+              "wmre": 0.012464709001533457,
+              "max_relative_error": 0.11325782811459027,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 3479.0
+            },
+            "top_20": {
+              "are": 0.007553778571997851,
+              "wmre": 0.006540452156051945,
+              "max_relative_error": 0.0764797162491687,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 968.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32768,
+            "update_seconds": 16.981067447006353,
+            "all_flows": {
+              "are": 172.17694770474552,
+              "wmre": 24.248083519054166,
+              "max_relative_error": 1996.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 61364140.0
+            },
+            "heavy_hitters": {
+              "are": 0.0055099201874159644,
+              "wmre": 0.004650529544119123,
+              "max_relative_error": 0.04197201865423051,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 1298.0
+            },
+            "top_20": {
+              "are": 0.003334691578528322,
+              "wmre": 0.0031080661072147675,
+              "max_relative_error": 0.029483484814896918,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 460.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65536,
+            "update_seconds": 17.287462216001586,
+            "all_flows": {
+              "are": 72.12981005162749,
+              "wmre": 9.97555084009041,
+              "max_relative_error": 1996.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 25244927.0
+            },
+            "heavy_hitters": {
+              "are": 0.0021912054088102017,
+              "wmre": 0.0017591756596013013,
+              "max_relative_error": 0.016643550624133148,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 491.0
+            },
+            "top_20": {
+              "are": 0.0011895006573978655,
+              "wmre": 0.0010270131484709667,
+              "max_relative_error": 0.013079139880292618,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 152.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131072,
+            "update_seconds": 17.76933156599989,
+            "all_flows": {
+              "are": 28.93073007313972,
+              "wmre": 3.8778711650623547,
+              "max_relative_error": 1996.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 9813651.0
+            },
+            "heavy_hitters": {
+              "are": 0.0006774641214100835,
+              "wmre": 0.0005660891124582599,
+              "max_relative_error": 0.005985369097761028,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 158.0
+            },
+            "top_20": {
+              "are": 0.0004781292208593924,
+              "wmre": 0.00039864326157754626,
+              "max_relative_error": 0.005985369097761028,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 59.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262144,
+            "update_seconds": 17.99609184199653,
+            "all_flows": {
+              "are": 10.968784952900855,
+              "wmre": 1.39968783093872,
+              "max_relative_error": 333.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 3542162.0
+            },
+            "heavy_hitters": {
+              "are": 0.00015826142758447475,
+              "wmre": 0.00012898232942086933,
+              "max_relative_error": 0.0022168033695411215,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 36.0
+            },
+            "top_20": {
+              "are": 0.00013533714438237899,
+              "wmre": 9.45933163065364e-05,
+              "max_relative_error": 0.0022168033695411215,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 14.0
+            }
+          }
+        ],
+        "Elastic": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16380,
+            "update_seconds": 12.34475044401188,
+            "all_flows": {
+              "are": 343.5577212320128,
+              "wmre": 48.885330820174815,
+              "max_relative_error": 908.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 123713129.0
+            },
+            "heavy_hitters": {
+              "are": 0.4292309084894624,
+              "wmre": 0.3855998394886567,
+              "max_relative_error": 0.8296296296296296,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 107624.0
+            },
+            "top_20": {
+              "are": 0.3414028584979459,
+              "wmre": 0.31246199375684114,
+              "max_relative_error": 0.8296296296296296,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 46245.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32760,
+            "update_seconds": 11.762858893998782,
+            "all_flows": {
+              "are": 151.23592713090198,
+              "wmre": 21.31262704095342,
+              "max_relative_error": 408.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 53935439.0
+            },
+            "heavy_hitters": {
+              "are": 0.26077124041305283,
+              "wmre": 0.22346905140662396,
+              "max_relative_error": 0.9046462192529608,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 62372.0
+            },
+            "top_20": {
+              "are": 0.16149377271535809,
+              "wmre": 0.15129525276685452,
+              "max_relative_error": 0.6516516516516516,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 22392.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65520,
+            "update_seconds": 10.91863113999716,
+            "all_flows": {
+              "are": 62.95298162274742,
+              "wmre": 8.742875432690028,
+              "max_relative_error": 321.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 22125420.0
+            },
+            "heavy_hitters": {
+              "are": 0.1616508427050214,
+              "wmre": 0.12885334709144847,
+              "max_relative_error": 0.9611296689948375,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 35964.0
+            },
+            "top_20": {
+              "are": 0.07580241348704267,
+              "wmre": 0.0669247712868745,
+              "max_relative_error": 0.25588025659301494,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 9905.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131060,
+            "update_seconds": 10.202170818010927,
+            "all_flows": {
+              "are": 24.636018737931135,
+              "wmre": 3.355719806534212,
+              "max_relative_error": 123.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 8492253.0
+            },
+            "heavy_hitters": {
+              "are": 0.07583160740883642,
+              "wmre": 0.05539432764377947,
+              "max_relative_error": 0.41325224071702943,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 15461.0
+            },
+            "top_20": {
+              "are": 0.019790095134277354,
+              "wmre": 0.017391656869501764,
+              "max_relative_error": 0.06929510155316607,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 2574.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262140,
+            "update_seconds": 9.211872202999075,
+            "all_flows": {
+              "are": 8.746194050416271,
+              "wmre": 1.1896186005342437,
+              "max_relative_error": 53.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 3010544.0
+            },
+            "heavy_hitters": {
+              "are": 0.04292160905362393,
+              "wmre": 0.03164724766040386,
+              "max_relative_error": 0.9398324447829398,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 8833.0
+            },
+            "top_20": {
+              "are": 0.017391858228384884,
+              "wmre": 0.014641694031161742,
+              "max_relative_error": 0.06914418438449169,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 2167.0
+            }
+          }
+        ],
+        "Stable": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16368,
+            "update_seconds": 18.40817383900867,
+            "all_flows": {
+              "are": 0.9930788426100797,
+              "wmre": 0.6958528932935022,
+              "max_relative_error": 1.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 1760981.0
+            },
+            "heavy_hitters": {
+              "are": 0.1839343286404703,
+              "wmre": 0.1963540994883701,
+              "max_relative_error": 1.0,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 54804.0
+            },
+            "top_20": {
+              "are": 0.23164743085202205,
+              "wmre": 0.2253212794421697,
+              "max_relative_error": 1.0,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 33348.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32736,
+            "update_seconds": 18.10864009699435,
+            "all_flows": {
+              "are": 0.9864875420847741,
+              "wmre": 0.6055688589628084,
+              "max_relative_error": 1.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 1532501.0
+            },
+            "heavy_hitters": {
+              "are": 0.08614039920142992,
+              "wmre": 0.07632171059231552,
+              "max_relative_error": 1.0,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 21302.0
+            },
+            "top_20": {
+              "are": 0.10749334363365541,
+              "wmre": 0.0762895096012216,
+              "max_relative_error": 1.0,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 11291.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65520,
+            "update_seconds": 17.356939143995987,
+            "all_flows": {
+              "are": 0.9733814036962132,
+              "wmre": 0.5031410529976132,
+              "max_relative_error": 1.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 1273289.0
+            },
+            "heavy_hitters": {
+              "are": 0.04408195949752274,
+              "wmre": 0.046172091090187314,
+              "max_relative_error": 1.0,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 12887.0
+            },
+            "top_20": {
+              "are": 0.10508922745854062,
+              "wmre": 0.07485709652572263,
+              "max_relative_error": 1.0,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 11079.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131040,
+            "update_seconds": 16.795666399993934,
+            "all_flows": {
+              "are": 0.9472808728463024,
+              "wmre": 0.4098839047212607,
+              "max_relative_error": 1.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 1037285.0
+            },
+            "heavy_hitters": {
+              "are": 0.027672821234935193,
+              "wmre": 0.02387247947031257,
+              "max_relative_error": 0.6603857237863001,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 6663.0
+            },
+            "top_20": {
+              "are": 0.036117293208326615,
+              "wmre": 0.02419561897812192,
+              "max_relative_error": 0.6603857237863001,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 3581.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262128,
+            "update_seconds": 16.445899354002904,
+            "all_flows": {
+              "are": 0.8940231746828974,
+              "wmre": 0.30432215847124094,
+              "max_relative_error": 1.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 770142.0
+            },
+            "heavy_hitters": {
+              "are": 0.005224458322394629,
+              "wmre": 0.005306189718675208,
+              "max_relative_error": 0.1509643094657504,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 1481.0
+            },
+            "top_20": {
+              "are": 0.00985131968696951,
+              "wmre": 0.007520168646369643,
+              "max_relative_error": 0.1509643094657504,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 1113.0
+            }
+          }
+        ],
+        "Aegis": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16384,
+            "update_seconds": 15.589589206996607,
+            "all_flows": {
+              "are": 0.9866786895536034,
+              "wmre": 0.6735936586213982,
+              "max_relative_error": 4.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 1704650.0
+            },
+            "heavy_hitters": {
+              "are": 0.039695284851934465,
+              "wmre": 0.02522321108674778,
+              "max_relative_error": 1.0,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 7040.0
+            },
+            "top_20": {
+              "are": 0.0013522198193184022,
+              "wmre": 0.001533763057255983,
+              "max_relative_error": 0.017166074149314373,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 227.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32768,
+            "update_seconds": 13.408580565999728,
+            "all_flows": {
+              "are": 0.9865463448051247,
+              "wmre": 0.5901022650038725,
+              "max_relative_error": 1.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 1493360.0
+            },
+            "heavy_hitters": {
+              "are": 0.0017374154840230128,
+              "wmre": 0.0013149031915960846,
+              "max_relative_error": 0.02731512325116589,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 367.0
+            },
+            "top_20": {
+              "are": 0.00023895613538298493,
+              "wmre": 0.0002837799489196092,
+              "max_relative_error": 0.003250380904012189,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 42.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65536,
+            "update_seconds": 12.168660488998285,
+            "all_flows": {
+              "are": 0.9778948207827681,
+              "wmre": 0.5085060141938135,
+              "max_relative_error": 1.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 1286866.0
+            },
+            "heavy_hitters": {
+              "are": 0.0007804392536434032,
+              "wmre": 0.0006234145922008685,
+              "max_relative_error": 0.016403402187120292,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 174.0
+            },
+            "top_20": {
+              "are": 0.00018207036795402,
+              "wmre": 0.00022972662531587412,
+              "max_relative_error": 0.003250380904012189,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 34.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131072,
+            "update_seconds": 11.4094656350062,
+            "all_flows": {
+              "are": 0.957523401192474,
+              "wmre": 0.43431883920527287,
+              "max_relative_error": 1.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 1099122.0
+            },
+            "heavy_hitters": {
+              "are": 0.0003504624365297526,
+              "wmre": 0.0003332043510039125,
+              "max_relative_error": 0.009894459102902375,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 93.0
+            },
+            "top_20": {
+              "are": 0.00022796948985941465,
+              "wmre": 0.0002702666180186754,
+              "max_relative_error": 0.003250380904012189,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 40.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262144,
+            "update_seconds": 11.261240669991821,
+            "all_flows": {
+              "are": 0.9201777124918225,
+              "wmre": 0.36574912671692983,
+              "max_relative_error": 1.0,
+              "flows": 175806,
+              "total_true_packets": 2530680,
+              "absolute_error_sum": 925594.0
+            },
+            "heavy_hitters": {
+              "are": 0.00019749365088858557,
+              "wmre": 0.00015047938432434757,
+              "max_relative_error": 0.002968337730870712,
+              "flows": 61,
+              "total_true_packets": 279108,
+              "absolute_error_sum": 42.0
+            },
+            "top_20": {
+              "are": 3.947772947497482e-05,
+              "wmre": 4.0539992702801315e-05,
+              "max_relative_error": 0.00021235931195582927,
+              "flows": 20,
+              "total_true_packets": 148002,
+              "absolute_error_sum": 6.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "MAWI",
+      "trace": "dataset/Mawi/mawi.dat",
+      "packets": 10000000,
+      "unique_flows": 2188837,
+      "hh_pct": 0.1,
+      "hh_threshold": 10000.0,
+      "hh_flow_count": 84,
+      "memories": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "results": {
+        "CountLess": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16384,
+            "update_seconds": 71.88717583200196,
+            "all_flows": {
+              "are": 1819.8604925487198,
+              "wmre": 429.6751358,
+              "max_relative_error": 54494.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 4296751358.0
+            },
+            "heavy_hitters": {
+              "are": 0.01144654434757609,
+              "wmre": 0.003933237133672977,
+              "max_relative_error": 0.12345163535142659,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 17363.0
+            },
+            "top_20": {
+              "are": 0.0028880955135397865,
+              "wmre": 0.0011743065384329388,
+              "max_relative_error": 0.026178184293089424,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 3727.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32768,
+            "update_seconds": 75.04812017599761,
+            "all_flows": {
+              "are": 826.848738924248,
+              "wmre": 195.1346618,
+              "max_relative_error": 28271.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 1951346618.0
+            },
+            "heavy_hitters": {
+              "are": 0.004808099474771334,
+              "wmre": 0.0016529880414912004,
+              "max_relative_error": 0.05650661099512874,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 7297.0
+            },
+            "top_20": {
+              "are": 0.0012794780039149995,
+              "wmre": 0.0005252398710940996,
+              "max_relative_error": 0.011902192858684284,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 1667.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65536,
+            "update_seconds": 73.22803907199705,
+            "all_flows": {
+              "are": 383.8525908250353,
+              "wmre": 90.5104516,
+              "max_relative_error": 9064.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 905104516.0
+            },
+            "heavy_hitters": {
+              "are": 0.002152218777834588,
+              "wmre": 0.0007416586059808401,
+              "max_relative_error": 0.026443980514961725,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 3274.0
+            },
+            "top_20": {
+              "are": 0.0005753444948552135,
+              "wmre": 0.00023851624620169968,
+              "max_relative_error": 0.005560996663402002,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 757.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131072,
+            "update_seconds": 72.75178935700387,
+            "all_flows": {
+              "are": 179.93003435952616,
+              "wmre": 42.363665,
+              "max_relative_error": 2543.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 423636650.0
+            },
+            "heavy_hitters": {
+              "are": 0.0009589164214709502,
+              "wmre": 0.00033390494356009724,
+              "max_relative_error": 0.012526096033402923,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 1474.0
+            },
+            "top_20": {
+              "are": 0.00026948419330533133,
+              "wmre": 0.0001115386408922083,
+              "max_relative_error": 0.0026393984163609503,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 354.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262144,
+            "update_seconds": 72.95520954599488,
+            "all_flows": {
+              "are": 84.56386481620109,
+              "wmre": 19.8578355,
+              "max_relative_error": 2120.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 198578355.0
+            },
+            "heavy_hitters": {
+              "are": 0.0004307953513663019,
+              "wmre": 0.00015268109359532262,
+              "max_relative_error": 0.005775922059846904,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 674.0
+            },
+            "top_20": {
+              "are": 0.00012580917382081302,
+              "wmre": 5.230343047487734e-05,
+              "max_relative_error": 0.0012449992530004482,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 166.0
+            }
+          }
+        ],
+        "Elastic": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16380,
+            "update_seconds": 40.7425709060044,
+            "all_flows": {
+              "are": 1773.7479001154009,
+              "wmre": 418.8392645,
+              "max_relative_error": 3959.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 4188392645.0
+            },
+            "heavy_hitters": {
+              "are": 0.21176996215023108,
+              "wmre": 0.0930824591170321,
+              "max_relative_error": 0.8811297330850404,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 410906.0
+            },
+            "top_20": {
+              "are": 0.06661528157256265,
+              "wmre": 0.0394610478078561,
+              "max_relative_error": 0.4171105044085396,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 125241.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32760,
+            "update_seconds": 38.71494756700122,
+            "all_flows": {
+              "are": 814.0649899141953,
+              "wmre": 192.1645054,
+              "max_relative_error": 1630.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 1921645054.0
+            },
+            "heavy_hitters": {
+              "are": 0.11832654102127166,
+              "wmre": 0.054688374263494946,
+              "max_relative_error": 0.798516281512605,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 241418.0
+            },
+            "top_20": {
+              "are": 0.04464509675461851,
+              "wmre": 0.025937775301942034,
+              "max_relative_error": 0.4034708857360247,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 82321.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65520,
+            "update_seconds": 36.51947446700069,
+            "all_flows": {
+              "are": 379.72834609333705,
+              "wmre": 89.5771404,
+              "max_relative_error": 833.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 895771404.0
+            },
+            "heavy_hitters": {
+              "are": 0.07263660068154025,
+              "wmre": 0.037765691153784295,
+              "max_relative_error": 0.6911170928667564,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 166714.0
+            },
+            "top_20": {
+              "are": 0.034333331162912734,
+              "wmre": 0.02116146384068501,
+              "max_relative_error": 0.397865103164302,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 67162.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131060,
+            "update_seconds": 34.29620093898848,
+            "all_flows": {
+              "are": 178.48859799104855,
+              "wmre": 42.0434501,
+              "max_relative_error": 224.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 420434501.0
+            },
+            "heavy_hitters": {
+              "are": 0.025073997135172908,
+              "wmre": 0.010747933481785871,
+              "max_relative_error": 0.2832405311142385,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 47446.0
+            },
+            "top_20": {
+              "are": 0.006052704179746281,
+              "wmre": 0.0028495917181613896,
+              "max_relative_error": 0.02608175771616471,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 9044.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262140,
+            "update_seconds": 34.87578203600424,
+            "all_flows": {
+              "are": 84.34237810792645,
+              "wmre": 19.8184394,
+              "max_relative_error": 106.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 198184394.0
+            },
+            "heavy_hitters": {
+              "are": 0.009558036104977612,
+              "wmre": 0.0035796240964292105,
+              "max_relative_error": 0.11264912120936163,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 15802.0
+            },
+            "top_20": {
+              "are": 0.0025757273436205616,
+              "wmre": 0.0011667445966775348,
+              "max_relative_error": 0.009569493323048739,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 3703.0
+            }
+          }
+        ],
+        "Stable": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16368,
+            "update_seconds": 63.06237243000942,
+            "all_flows": {
+              "are": 0.9995009964346668,
+              "wmre": 0.4351425,
+              "max_relative_error": 1.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 4351425.0
+            },
+            "heavy_hitters": {
+              "are": 0.07844014011425009,
+              "wmre": 0.023610975822473117,
+              "max_relative_error": 1.0,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 104229.0
+            },
+            "top_20": {
+              "are": 0.012427039041346993,
+              "wmre": 0.004761187577746214,
+              "max_relative_error": 0.2375126574924055,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 15111.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32736,
+            "update_seconds": 65.53239038698666,
+            "all_flows": {
+              "are": 0.9990150840778239,
+              "wmre": 0.3965151,
+              "max_relative_error": 1.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 3965151.0
+            },
+            "heavy_hitters": {
+              "are": 0.0170572161744819,
+              "wmre": 0.005221059117485156,
+              "max_relative_error": 0.7553931802366041,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 23048.0
+            },
+            "top_20": {
+              "are": 0.0022010670578079612,
+              "wmre": 0.0008711987064038304,
+              "max_relative_error": 0.02338938596636842,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 2765.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65520,
+            "update_seconds": 63.20461525100109,
+            "all_flows": {
+              "are": 0.9980250095719205,
+              "wmre": 0.3787741,
+              "max_relative_error": 1.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 3787741.0
+            },
+            "heavy_hitters": {
+              "are": 0.018433498918838782,
+              "wmre": 0.007534155032473048,
+              "max_relative_error": 1.0,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 33259.0
+            },
+            "top_20": {
+              "are": 0.0028338476496170308,
+              "wmre": 0.0011336611014976425,
+              "max_relative_error": 0.044155973506415896,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 3598.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131040,
+            "update_seconds": 61.537487674999284,
+            "all_flows": {
+              "are": 0.9959450891370708,
+              "wmre": 0.3550737,
+              "max_relative_error": 1.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 3550737.0
+            },
+            "heavy_hitters": {
+              "are": 0.0029266725622795688,
+              "wmre": 0.0012049120724532951,
+              "max_relative_error": 0.07740527228969608,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 5319.0
+            },
+            "top_20": {
+              "are": 0.0011085613243698822,
+              "wmre": 0.00047073087427389605,
+              "max_relative_error": 0.019418794133623032,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 1494.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262128,
+            "update_seconds": 61.433645764991525,
+            "all_flows": {
+              "are": 0.9915672471578626,
+              "wmre": 0.3315916,
+              "max_relative_error": 1.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 3315916.0
+            },
+            "heavy_hitters": {
+              "are": 0.0021888233216416485,
+              "wmre": 0.000528494052459774,
+              "max_relative_error": 0.09233218360307774,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 2333.0
+            },
+            "top_20": {
+              "are": 6.722722956528578e-05,
+              "wmre": 2.615171523743867e-05,
+              "max_relative_error": 0.0010125993924403646,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 83.0
+            }
+          }
+        ],
+        "Aegis": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16384,
+            "update_seconds": 44.70249742400483,
+            "all_flows": {
+              "are": 0.9980394706699954,
+              "wmre": 0.4066777,
+              "max_relative_error": 3.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 4066777.0
+            },
+            "heavy_hitters": {
+              "are": 0.0250879607021364,
+              "wmre": 0.005632210727092739,
+              "max_relative_error": 1.0,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 24863.0
+            },
+            "top_20": {
+              "are": 0.0003465131020137599,
+              "wmre": 0.00012603236259006587,
+              "max_relative_error": 0.00433259740044156,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 400.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32768,
+            "update_seconds": 39.814674820998334,
+            "all_flows": {
+              "are": 0.9983980552357724,
+              "wmre": 0.3779477,
+              "max_relative_error": 2.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 3779477.0
+            },
+            "heavy_hitters": {
+              "are": 0.012343875155057962,
+              "wmre": 0.002728325061219682,
+              "max_relative_error": 1.0,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 12044.0
+            },
+            "top_20": {
+              "are": 4.916330134682786e-05,
+              "wmre": 2.3946148892112517e-05,
+              "max_relative_error": 0.0004813997111601733,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 76.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65536,
+            "update_seconds": 39.316213775993674,
+            "all_flows": {
+              "are": 0.9982269234367803,
+              "wmre": 0.3591286,
+              "max_relative_error": 1.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 3591286.0
+            },
+            "heavy_hitters": {
+              "are": 0.0001267641744968712,
+              "wmre": 4.8703909678033175e-05,
+              "max_relative_error": 0.0022947333072144177,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 215.0
+            },
+            "top_20": {
+              "are": 4.0182575629888376e-05,
+              "wmre": 1.60691262302334e-05,
+              "max_relative_error": 0.00044819973108016134,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 51.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131072,
+            "update_seconds": 40.030297070989036,
+            "all_flows": {
+              "are": 0.9965528991229319,
+              "wmre": 0.3448969,
+              "max_relative_error": 1.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 3448969.0
+            },
+            "heavy_hitters": {
+              "are": 8.920872110248848e-05,
+              "wmre": 3.397947186839524e-05,
+              "max_relative_error": 0.002057973552850512,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 150.0
+            },
+            "top_20": {
+              "are": 2.7112132648724982e-05,
+              "wmre": 1.1342912633105929e-05,
+              "max_relative_error": 0.0001687316203056453,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 36.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262144,
+            "update_seconds": 40.35373476600216,
+            "all_flows": {
+              "are": 0.9931358100277744,
+              "wmre": 0.329217,
+              "max_relative_error": 1.0,
+              "flows": 2188837,
+              "total_true_packets": 10000000,
+              "absolute_error_sum": 3292170.0
+            },
+            "heavy_hitters": {
+              "are": 6.36600077382935e-05,
+              "wmre": 2.6050928432436352e-05,
+              "max_relative_error": 0.002057973552850512,
+              "flows": 84,
+              "total_true_packets": 4414430,
+              "absolute_error_sum": 115.0
+            },
+            "top_20": {
+              "are": 1.947009917401343e-05,
+              "wmre": 6.616699035978458e-06,
+              "max_relative_error": 0.0001687316203056453,
+              "flows": 20,
+              "total_true_packets": 3173788,
+              "absolute_error_sum": 21.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "MAWI26",
+      "trace": "dataset/Mawi/mawi26.dat",
+      "packets": 8000000,
+      "unique_flows": 2938857,
+      "hh_pct": 0.1,
+      "hh_threshold": 8000.0,
+      "hh_flow_count": 103,
+      "memories": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "results": {
+        "CountLess": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16384,
+            "update_seconds": 55.0915779479983,
+            "all_flows": {
+              "are": 2091.51902280902,
+              "wmre": 804.5117405,
+              "max_relative_error": 32880.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 6436093924.0
+            },
+            "heavy_hitters": {
+              "are": 0.014292730300550645,
+              "wmre": 0.009474618121607851,
+              "max_relative_error": 0.2111667045712986,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 21561.0
+            },
+            "top_20": {
+              "are": 0.0038407673627655044,
+              "wmre": 0.0036138892179370745,
+              "max_relative_error": 0.035546934045447676,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 3844.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32768,
+            "update_seconds": 57.41775653399236,
+            "all_flows": {
+              "are": 964.3856169658666,
+              "wmre": 370.863641,
+              "max_relative_error": 14661.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 2966909128.0
+            },
+            "heavy_hitters": {
+              "are": 0.006430213875227121,
+              "wmre": 0.004293701297074825,
+              "max_relative_error": 0.09768023652490335,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 9771.0
+            },
+            "top_20": {
+              "are": 0.0017722221273095689,
+              "wmre": 0.0016678042332519175,
+              "max_relative_error": 0.01647604171915151,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 1774.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65536,
+            "update_seconds": 56.093308723997325,
+            "all_flows": {
+              "are": 451.6888807436511,
+              "wmre": 173.621941625,
+              "max_relative_error": 9297.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 1388975533.0
+            },
+            "heavy_hitters": {
+              "are": 0.002999868488428603,
+              "wmre": 0.0020033757254491994,
+              "max_relative_error": 0.04582670002274278,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 4559.0
+            },
+            "top_20": {
+              "are": 0.0008341233770231419,
+              "wmre": 0.0007840748199166286,
+              "max_relative_error": 0.00775935909709276,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 834.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131072,
+            "update_seconds": 57.48703494897927,
+            "all_flows": {
+              "are": 214.28101415674354,
+              "wmre": 82.2999385,
+              "max_relative_error": 2927.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 658399508.0
+            },
+            "heavy_hitters": {
+              "are": 0.001404104380519697,
+              "wmre": 0.0009395080721672272,
+              "max_relative_error": 0.02171935410507164,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 2138.0
+            },
+            "top_20": {
+              "are": 0.0003962814615417115,
+              "wmre": 0.0003732346564830954,
+              "max_relative_error": 0.003703330478157908,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 397.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262144,
+            "update_seconds": 57.37879575698753,
+            "all_flows": {
+              "are": 101.69518591041587,
+              "wmre": 39.004171875,
+              "max_relative_error": 1714.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 312033375.0
+            },
+            "heavy_hitters": {
+              "are": 0.0006583973920740056,
+              "wmre": 0.0004398725819641695,
+              "max_relative_error": 0.010347964521264498,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 1001.0
+            },
+            "top_20": {
+              "are": 0.0001866013884706389,
+              "wmre": 0.00017580574499329683,
+              "max_relative_error": 0.0017886834282259284,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 187.0
+            }
+          }
+        ],
+        "Elastic": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16380,
+            "update_seconds": 39.069227967993356,
+            "all_flows": {
+              "are": 2153.9650313949364,
+              "wmre": 828.6089065,
+              "max_relative_error": 4236.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 6628871252.0
+            },
+            "heavy_hitters": {
+              "are": 0.280939094770527,
+              "wmre": 0.19501471881331958,
+              "max_relative_error": 0.8879938256716994,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 443787.0
+            },
+            "top_20": {
+              "are": 0.09299350763264873,
+              "wmre": 0.07862841434499668,
+              "max_relative_error": 0.35586599755866,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 83635.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32760,
+            "update_seconds": 37.22310496600403,
+            "all_flows": {
+              "are": 1015.1665171260098,
+              "wmre": 390.452338875,
+              "max_relative_error": 1549.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 3123618711.0
+            },
+            "heavy_hitters": {
+              "are": 0.13714219308976988,
+              "wmre": 0.0955727549690002,
+              "max_relative_error": 0.7596481035770604,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 217491.0
+            },
+            "top_20": {
+              "are": 0.05185249981863793,
+              "wmre": 0.04291352425649212,
+              "max_relative_error": 0.21616709616167096,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 45646.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65520,
+            "update_seconds": 35.82665107399225,
+            "all_flows": {
+              "are": 484.71666632381385,
+              "wmre": 186.36499025,
+              "max_relative_error": 841.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 1490919922.0
+            },
+            "heavy_hitters": {
+              "are": 0.06245536930055626,
+              "wmre": 0.041233330652791125,
+              "max_relative_error": 0.37668021256642703,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 93833.0
+            },
+            "top_20": {
+              "are": 0.022143042672083554,
+              "wmre": 0.017502543072407523,
+              "max_relative_error": 0.10869988322304398,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 18617.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131060,
+            "update_seconds": 35.139516562980134,
+            "all_flows": {
+              "are": 232.50829520570542,
+              "wmre": 89.337569125,
+              "max_relative_error": 263.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 714700553.0
+            },
+            "heavy_hitters": {
+              "are": 0.039167642724511995,
+              "wmre": 0.027452267672792803,
+              "max_relative_error": 0.9155160878292075,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 62472.0
+            },
+            "top_20": {
+              "are": 0.011714829935998561,
+              "wmre": 0.00906762786342432,
+              "max_relative_error": 0.08469462391807875,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 9645.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262140,
+            "update_seconds": 34.77545759599889,
+            "all_flows": {
+              "are": 111.33231464345867,
+              "wmre": 42.729373125,
+              "max_relative_error": 149.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 341834985.0
+            },
+            "heavy_hitters": {
+              "are": 0.0202243342239616,
+              "wmre": 0.013216391383770591,
+              "max_relative_error": 0.21883003790595226,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 30076.0
+            },
+            "top_20": {
+              "are": 0.004029245693291271,
+              "wmre": 0.003604487841199465,
+              "max_relative_error": 0.008719642353699304,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 3834.0
+            }
+          }
+        ],
+        "Stable": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16368,
+            "update_seconds": 57.42931543600571,
+            "all_flows": {
+              "are": 0.9996091608057358,
+              "wmre": 0.604620125,
+              "max_relative_error": 1.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 4836961.0
+            },
+            "heavy_hitters": {
+              "are": 0.08277044247027397,
+              "wmre": 0.08039824947410838,
+              "max_relative_error": 1.0,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 182959.0
+            },
+            "top_20": {
+              "are": 0.10037601845885898,
+              "wmre": 0.07868858315611738,
+              "max_relative_error": 1.0,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 83699.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32736,
+            "update_seconds": 57.50197229899641,
+            "all_flows": {
+              "are": 0.999242487216539,
+              "wmre": 0.561727125,
+              "max_relative_error": 1.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 4493817.0
+            },
+            "heavy_hitters": {
+              "are": 0.04236379072959245,
+              "wmre": 0.045810466330851854,
+              "max_relative_error": 1.0,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 104249.0
+            },
+            "top_20": {
+              "are": 0.05329141598637451,
+              "wmre": 0.04129836773297082,
+              "max_relative_error": 1.0,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 43928.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65520,
+            "update_seconds": 55.80931341700489,
+            "all_flows": {
+              "are": 0.9984704546691057,
+              "wmre": 0.528794875,
+              "max_relative_error": 1.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 4230359.0
+            },
+            "heavy_hitters": {
+              "are": 0.023913580950721144,
+              "wmre": 0.0316163361909671,
+              "max_relative_error": 1.0,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 71948.0
+            },
+            "top_20": {
+              "are": 0.050343992232825686,
+              "wmre": 0.03768729892805502,
+              "max_relative_error": 1.0,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 40087.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131040,
+            "update_seconds": 54.543777515995316,
+            "all_flows": {
+              "are": 0.9968923952666556,
+              "wmre": 0.493357625,
+              "max_relative_error": 1.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 3946861.0
+            },
+            "heavy_hitters": {
+              "are": 0.003931395113759689,
+              "wmre": 0.0030597730152013107,
+              "max_relative_error": 0.14937601219396018,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 6963.0
+            },
+            "top_20": {
+              "are": 0.0012268774453437193,
+              "wmre": 0.0009241553333070095,
+              "max_relative_error": 0.02413462991887943,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 983.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262128,
+            "update_seconds": 54.12403602700215,
+            "all_flows": {
+              "are": 0.9935973453682392,
+              "wmre": 0.4638895,
+              "max_relative_error": 1.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 3711116.0
+            },
+            "heavy_hitters": {
+              "are": 0.0015273374229211748,
+              "wmre": 0.0009663134942449638,
+              "max_relative_error": 0.04303264779746148,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 2199.0
+            },
+            "top_20": {
+              "are": 3.676356550037107e-05,
+              "wmre": 3.008440556035026e-05,
+              "max_relative_error": 0.0006851974510654821,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 32.0
+            }
+          }
+        ],
+        "Aegis": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16384,
+            "update_seconds": 44.632364028992015,
+            "all_flows": {
+              "are": 0.9987814906424073,
+              "wmre": 0.566947125,
+              "max_relative_error": 4.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 4535577.0
+            },
+            "heavy_hitters": {
+              "are": 0.012642221597755323,
+              "wmre": 0.013173766368335503,
+              "max_relative_error": 1.0,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 29979.0
+            },
+            "top_20": {
+              "are": 0.00021898048773103876,
+              "wmre": 0.00017392546964577492,
+              "max_relative_error": 0.0017586734577347371,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 185.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32768,
+            "update_seconds": 39.24928866699338,
+            "all_flows": {
+              "are": 0.9986479423475269,
+              "wmre": 0.529376875,
+              "max_relative_error": 1.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 4235015.0
+            },
+            "heavy_hitters": {
+              "are": 0.0020165495081833026,
+              "wmre": 0.001655344671587439,
+              "max_relative_error": 0.15360152647479727,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 3767.0
+            },
+            "top_20": {
+              "are": 2.1111623362187757e-05,
+              "wmre": 1.880275347521891e-05,
+              "max_relative_error": 0.00017525850629678777,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 20.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65536,
+            "update_seconds": 37.9745988700015,
+            "all_flows": {
+              "are": 0.998641587092374,
+              "wmre": 0.505689875,
+              "max_relative_error": 1.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 4045519.0
+            },
+            "heavy_hitters": {
+              "are": 0.0002973317463375127,
+              "wmre": 0.0002271869379375381,
+              "max_relative_error": 0.009725758650916225,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 517.0
+            },
+            "top_20": {
+              "are": 1.0780608851010241e-05,
+              "wmre": 1.1281652085131347e-05,
+              "max_relative_error": 6.85197451065482e-05,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 12.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131072,
+            "update_seconds": 39.25925814700895,
+            "all_flows": {
+              "are": 0.997425962879506,
+              "wmre": 0.490503625,
+              "max_relative_error": 1.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 3924029.0
+            },
+            "heavy_hitters": {
+              "are": 0.00014617467868083394,
+              "wmre": 8.129513253084052e-05,
+              "max_relative_error": 0.006595405958608142,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 185.0
+            },
+            "top_20": {
+              "are": 1.3304191779281403e-05,
+              "wmre": 1.4102065106414183e-05,
+              "max_relative_error": 7.511078841290905e-05,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 15.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262144,
+            "update_seconds": 40.116144733998226,
+            "all_flows": {
+              "are": 0.9949366526367652,
+              "wmre": 0.473982875,
+              "max_relative_error": 1.0,
+              "flows": 2938857,
+              "total_true_packets": 8000000,
+              "absolute_error_sum": 3791863.0
+            },
+            "heavy_hitters": {
+              "are": 5.9795324328201515e-05,
+              "wmre": 4.0867282839827934e-05,
+              "max_relative_error": 0.0015337423312883436,
+              "flows": 103,
+              "total_true_packets": 2275659,
+              "absolute_error_sum": 93.0
+            },
+            "top_20": {
+              "are": 1.2743314117916899e-05,
+              "wmre": 1.3161927432653237e-05,
+              "max_relative_error": 7.511078841290905e-05,
+              "flows": 20,
+              "total_true_packets": 1063674,
+              "absolute_error_sum": 14.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "UNI",
+      "trace": "dataset/UNI/univ1_pt0.csv",
+      "packets": 887550,
+      "unique_flows": 27945,
+      "hh_pct": 0.1,
+      "hh_threshold": 887.55,
+      "hh_flow_count": 147,
+      "memories": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "results": {
+        "CountLess": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16384,
+            "update_seconds": 6.418406637007138,
+            "all_flows": {
+              "are": 42.55588866056196,
+              "wmre": 4.994553546279083,
+              "max_relative_error": 902.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 4432916.0
+            },
+            "heavy_hitters": {
+              "are": 0.019667666045681514,
+              "wmre": 0.012498579106118964,
+              "max_relative_error": 0.16473988439306358,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 4728.0
+            },
+            "top_20": {
+              "are": 0.002148441951600904,
+              "wmre": 0.0016578378891313934,
+              "max_relative_error": 0.022843202483921046,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 297.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32768,
+            "update_seconds": 6.443656457006,
+            "all_flows": {
+              "are": 16.486035770401955,
+              "wmre": 1.86094642555349,
+              "max_relative_error": 751.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 1651683.0
+            },
+            "heavy_hitters": {
+              "are": 0.006863992564363889,
+              "wmre": 0.00443847595583201,
+              "max_relative_error": 0.07547993019197208,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 1679.0
+            },
+            "top_20": {
+              "are": 0.0007384174595129479,
+              "wmre": 0.0005247029009372087,
+              "max_relative_error": 0.00842758926591262,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 94.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65536,
+            "update_seconds": 6.528741415007971,
+            "all_flows": {
+              "are": 5.906128277447608,
+              "wmre": 0.6251918201791449,
+              "max_relative_error": 250.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 554889.0
+            },
+            "heavy_hitters": {
+              "are": 0.002608124514989055,
+              "wmre": 0.0016099058112577092,
+              "max_relative_error": 0.04924242424242424,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 609.0
+            },
+            "top_20": {
+              "are": 0.00030725402691619987,
+              "wmre": 0.000178622264148837,
+              "max_relative_error": 0.004879130627633622,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 32.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131072,
+            "update_seconds": 6.640131065010792,
+            "all_flows": {
+              "are": 1.8287745451266029,
+              "wmre": 0.17525435186750044,
+              "max_relative_error": 187.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 155547.0
+            },
+            "heavy_hitters": {
+              "are": 0.0007370416904592753,
+              "wmre": 0.0004573295654311719,
+              "max_relative_error": 0.011988716502115656,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 173.0
+            },
+            "top_20": {
+              "are": 3.8712331281580664e-05,
+              "wmre": 2.2327783018604625e-05,
+              "max_relative_error": 0.00044355732978487467,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 4.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262144,
+            "update_seconds": 6.860630242998013,
+            "all_flows": {
+              "are": 0.4349212246492223,
+              "wmre": 0.03694214410455749,
+              "max_relative_error": 44.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 32788.0
+            },
+            "heavy_hitters": {
+              "are": 0.00013600483576792972,
+              "wmre": 7.93057049880645e-05,
+              "max_relative_error": 0.0045627376425855515,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 30.0
+            },
+            "top_20": {
+              "are": 0.0,
+              "wmre": 0.0,
+              "max_relative_error": 0.0,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 0.0
+            }
+          }
+        ],
+        "Elastic": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16380,
+            "update_seconds": 3.291120685986243,
+            "all_flows": {
+              "are": 29.688271483883486,
+              "wmre": 3.5058881189792124,
+              "max_relative_error": 286.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 3111651.0
+            },
+            "heavy_hitters": {
+              "are": 0.2657900589526732,
+              "wmre": 0.18301113187745682,
+              "max_relative_error": 0.9484126984126984,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 69230.0
+            },
+            "top_20": {
+              "are": 0.10360051098057091,
+              "wmre": 0.0912648130885464,
+              "max_relative_error": 0.49177892234548337,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 16350.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32760,
+            "update_seconds": 2.9631356690078974,
+            "all_flows": {
+              "are": 11.025621488616725,
+              "wmre": 1.2962649991549773,
+              "max_relative_error": 125.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 1150500.0
+            },
+            "heavy_hitters": {
+              "are": 0.14667729183857964,
+              "wmre": 0.0857083189041009,
+              "max_relative_error": 0.9206349206349206,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 32422.0
+            },
+            "top_20": {
+              "are": 0.03894015246601865,
+              "wmre": 0.026274218667142992,
+              "max_relative_error": 0.16183399782529903,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 4707.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65520,
+            "update_seconds": 2.7285394840000663,
+            "all_flows": {
+              "are": 3.555955344074685,
+              "wmre": 0.4464931553151935,
+              "max_relative_error": 67.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 396285.0
+            },
+            "heavy_hitters": {
+              "are": 0.07330461811685524,
+              "wmre": 0.04036924736242443,
+              "max_relative_error": 0.740916271721959,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 15271.0
+            },
+            "top_20": {
+              "are": 0.015913138569604256,
+              "wmre": 0.010644770554119755,
+              "max_relative_error": 0.07032210474551266,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 1907.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131060,
+            "update_seconds": 2.5389266920101363,
+            "all_flows": {
+              "are": 1.0021705736966418,
+              "wmre": 0.18618894710157174,
+              "max_relative_error": 27.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 165252.0
+            },
+            "heavy_hitters": {
+              "are": 0.05021124795031539,
+              "wmre": 0.02681854590346381,
+              "max_relative_error": 0.9972972972972973,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 10145.0
+            },
+            "top_20": {
+              "are": 0.008673111317257747,
+              "wmre": 0.008841802075367432,
+              "max_relative_error": 0.04490106544901065,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 1584.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262140,
+            "update_seconds": 2.2706042819772847,
+            "all_flows": {
+              "are": 0.37671335901348035,
+              "wmre": 0.1199526787223255,
+              "max_relative_error": 9.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 106464.0
+            },
+            "heavy_hitters": {
+              "are": 0.02756734121750561,
+              "wmre": 0.01658546643650389,
+              "max_relative_error": 1.0,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 6274.0
+            },
+            "top_20": {
+              "are": 0.014694436915903311,
+              "wmre": 0.009399996650832547,
+              "max_relative_error": 0.16110909749909388,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 1684.0
+            }
+          }
+        ],
+        "Stable": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16368,
+            "update_seconds": 6.020743203989696,
+            "all_flows": {
+              "are": 0.9614068665455635,
+              "wmre": 0.47615458284040335,
+              "max_relative_error": 1.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 422611.0
+            },
+            "heavy_hitters": {
+              "are": 0.19606123489134442,
+              "wmre": 0.13386009944935406,
+              "max_relative_error": 1.0,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 50637.0
+            },
+            "top_20": {
+              "are": 0.004141815012743985,
+              "wmre": 0.0029863409787383687,
+              "max_relative_error": 0.03869573757611471,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 535.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32736,
+            "update_seconds": 5.817542567994678,
+            "all_flows": {
+              "are": 0.9223401515543471,
+              "wmre": 0.37606219367922933,
+              "max_relative_error": 1.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 333774.0
+            },
+            "heavy_hitters": {
+              "are": 0.06995255666103148,
+              "wmre": 0.04124689716429234,
+              "max_relative_error": 1.0,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 15603.0
+            },
+            "top_20": {
+              "are": 0.005378169764815632,
+              "wmre": 0.0035836091744860426,
+              "max_relative_error": 0.07248084855627578,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 642.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65520,
+            "update_seconds": 5.448906667006668,
+            "all_flows": {
+              "are": 0.8373531119520098,
+              "wmre": 0.3018151090079432,
+              "max_relative_error": 1.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 267876.0
+            },
+            "heavy_hitters": {
+              "are": 0.04817300157279638,
+              "wmre": 0.036335230502031544,
+              "max_relative_error": 1.0,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 13745.0
+            },
+            "top_20": {
+              "are": 0.007132461664353093,
+              "wmre": 0.004041328726367437,
+              "max_relative_error": 0.09536482590374806,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 724.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131040,
+            "update_seconds": 5.538319412007695,
+            "all_flows": {
+              "are": 0.6505731192365896,
+              "wmre": 0.201930032110867,
+              "max_relative_error": 1.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 179223.0
+            },
+            "heavy_hitters": {
+              "are": 0.01822070743451043,
+              "wmre": 0.011369794571788846,
+              "max_relative_error": 0.6431372549019608,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 4301.0
+            },
+            "top_20": {
+              "are": 0.0011919590821936506,
+              "wmre": 0.0008819474292348827,
+              "max_relative_error": 0.017185821697099892,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 158.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262128,
+            "update_seconds": 4.991544390999479,
+            "all_flows": {
+              "are": 0.2796990450293304,
+              "wmre": 0.07234296659343135,
+              "max_relative_error": 1.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 64208.0
+            },
+            "heavy_hitters": {
+              "are": 0.004555395392328645,
+              "wmre": 0.003145792964526558,
+              "max_relative_error": 0.2803921568627451,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 1190.0
+            },
+            "top_20": {
+              "are": 0.0022510534486582393,
+              "wmre": 0.0011331349881941847,
+              "max_relative_error": 0.04502106897316478,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 203.0
+            }
+          }
+        ],
+        "Aegis": [
+          {
+            "memory_kb": 16,
+            "memory_bytes": 16384,
+            "update_seconds": 3.653046822990291,
+            "all_flows": {
+              "are": 0.9445287936518951,
+              "wmre": 0.35487014816066703,
+              "max_relative_error": 8.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 314965.0
+            },
+            "heavy_hitters": {
+              "are": 0.0018546406068777196,
+              "wmre": 0.0010679834938392685,
+              "max_relative_error": 0.10089686098654709,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 404.0
+            },
+            "top_20": {
+              "are": 0.00029907776318502345,
+              "wmre": 0.0002456056132046509,
+              "max_relative_error": 0.0028831226436016855,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 44.0
+            }
+          },
+          {
+            "memory_kb": 32,
+            "memory_bytes": 32768,
+            "update_seconds": 3.1841451470099855,
+            "all_flows": {
+              "are": 0.9247484191365023,
+              "wmre": 0.26988676694270747,
+              "max_relative_error": 3.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 239538.0
+            },
+            "heavy_hitters": {
+              "are": 0.001061942608725388,
+              "wmre": 0.00048112127692759125,
+              "max_relative_error": 0.09977578475336323,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 182.0
+            },
+            "top_20": {
+              "are": 8.136870133919483e-05,
+              "wmre": 5.5819457546511565e-05,
+              "max_relative_error": 0.0006713211600429646,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 10.0
+            }
+          },
+          {
+            "memory_kb": 64,
+            "memory_bytes": 65536,
+            "update_seconds": 2.777134406991536,
+            "all_flows": {
+              "are": 0.8554464629563345,
+              "wmre": 0.1984564249901414,
+              "max_relative_error": 2.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 176140.0
+            },
+            "heavy_hitters": {
+              "are": 0.00034028721303757525,
+              "wmre": 0.00022469949746618272,
+              "max_relative_error": 0.008281573498964804,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 85.0
+            },
+            "top_20": {
+              "are": 7.72213887977217e-05,
+              "wmre": 5.0237511791860404e-05,
+              "max_relative_error": 0.0006713211600429646,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 9.0
+            }
+          },
+          {
+            "memory_kb": 128,
+            "memory_bytes": 131072,
+            "update_seconds": 2.5730089760036208,
+            "all_flows": {
+              "are": 0.7108677171712503,
+              "wmre": 0.13269224269055266,
+              "max_relative_error": 3.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 117771.0
+            },
+            "heavy_hitters": {
+              "are": 0.00017094163920867902,
+              "wmre": 0.00012688912798090318,
+              "max_relative_error": 0.0033632286995515697,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 48.0
+            },
+            "top_20": {
+              "are": 7.72213887977217e-05,
+              "wmre": 5.0237511791860404e-05,
+              "max_relative_error": 0.0006713211600429646,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 9.0
+            }
+          },
+          {
+            "memory_kb": 256,
+            "memory_bytes": 262144,
+            "update_seconds": 2.249986142007401,
+            "all_flows": {
+              "are": 0.44572066002605987,
+              "wmre": 0.06248324038082362,
+              "max_relative_error": 1.0,
+              "flows": 27945,
+              "total_true_packets": 887550,
+              "absolute_error_sum": 55457.0
+            },
+            "heavy_hitters": {
+              "are": 9.651745821530424e-05,
+              "wmre": 6.0801040490849446e-05,
+              "max_relative_error": 0.0033632286995515697,
+              "flows": 147,
+              "total_true_packets": 378283,
+              "absolute_error_sum": 23.0
+            },
+            "top_20": {
+              "are": 4.3954589063856104e-05,
+              "wmre": 3.349167452790694e-05,
+              "max_relative_error": 0.0006713211600429646,
+              "flows": 20,
+              "total_true_packets": 179149,
+              "absolute_error_sum": 6.0
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

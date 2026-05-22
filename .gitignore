@@ -1,0 +1,9 @@
+./dataset
+.venv/
+# dataset/*
+sketch/__pycache__/*
+tests/__pycache__/*
+Output.txt
+__pycache__/*
+results/*
+dataset/
